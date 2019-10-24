@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="orz.doublexi.mvcbyxml.dao.ShuqianDao">
+  <insert id="insertShuQian" parameterType="orz.doublexi.mvcbyxml.projo.ShuQian">
+  INSERT INTO shuqian (fenlei,mingcheng,webaddress)  values (#{fenlei},#{mingcheng},#{webaddress})
+  </insert>
+  <select id="queryAll" resultType="orz.doublexi.mvcbyxml.projo.ShuQian">
+       SELECT fenlei,mingcheng,webaddress FROM shuqian 
+      <where>
+      <if test='arg0!=0'> fenlei=#{arg0} ORDER BY fenlei ASC LIMIT #{arg1},#{arg2}</if>
+      <if test='arg0==0'> 1=1 ORDER BY fenlei ASC LIMIT #{arg1},#{arg2}</if>
+     </where> 
+    </select>
+   <select id="selectCount" resultType="java.lang.Integer" parameterType="java.lang.Integer" >
+     select count(*) from shuqian 
+     <where>
+      <if test='_parameter!=0'>fenlei=#{fenlei}</if>
+     </where>
+
+    </select> 
+  </mapper>

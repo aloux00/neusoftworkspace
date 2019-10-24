@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+</head>
+<body>
+<a href="javascript:showHello();">传统javascript</a>
+<button type="button" id="mybtn">jquery</button>
+<p id="txt">变颜色</p>
+</body>
+<script>
+$("#txt").css("background-color","yellow");
+function showHello(){
+	alert("hello");
+}
+$("#mybtn").click(function(){
+	alert("hello,world");
+});
+
+</script>
+</html>

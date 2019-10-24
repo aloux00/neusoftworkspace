@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<table>
+<tr><td>username</td><td><input id="username" type="text"/></td></tr>
+<tr><td>password</td><td ><input id="pwd"  type="password"/></td></tr>
+<tr><td colspan="2"><button type="button">login</button></button></td></tr>
+
+</table>
+</body>
+
+<script type="text/javascript">
+$("#username").focusout(function() {
+	if($(this).val()==""){
+		$(this).val("useraccount")
+	}
+})
+$("#username").focusin(function() {
+	if($(this).val()=="useraccount"){
+		$(this).val("")
+		
+	}
+})
+$("#pwd").focusout(function() {
+	if($(this).val()==""){
+		$(this).attr("type", "text")
+		$(this).val("password")
+	}
+})
+
+$("#pwd").focusin(function() {
+	if($(this).val()=="password"){
+	$(this).attr("type", "password")
+	$(this).val("")
+	}
+		
+})
+
+</script>
+
+
+</html>

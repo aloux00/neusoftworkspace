@@ -1,0 +1,35 @@
+#head{
+
+font-size: 18px;	
+}
+#shang,#xia{
+	font-size: 12px;
+}
+#head,#shang{
+	color: red;
+}
+#xia{
+	color:black;
+}
+hr{
+	width: 40%;
+	margin-left: 0px;
+}
+ body>h1 font{
+		color: red;
+}
+#aa~font{/*后续所有兄弟选择器*/
+	color:blue;
+}
+#aa+font{/*后续一个兄弟选择器  */
+		color: green;
+}
+#papa{
+	font-size: 40px;
+}
+/* 
+
+a.b   交集选择器
+ */
+
+

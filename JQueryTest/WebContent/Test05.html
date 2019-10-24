@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div id="div01" class="yin" style="border: blue 1px solid;">
+这是div
+</div>
+<button id="bt01">显式</button>
+<button id="bt02" class="yin">隐藏</button>
+<button id="bt03">切换</button>
+</body>
+
+<script type="text/javascript">
+$("#bt01").click(function() {
+	$("#div01").show(300);
+	$("#bt02").show();
+	$("#bt01").hide();
+})
+$("#bt02").click(function() {
+	$("#div01").hide(300);
+})
+$("#bt03").click(function() {
+	$("#div01").toggle(300);
+})
+$(".yin").click(function() {
+	$(this).toggle(300);
+	$("#bt01").show();
+})
+
+</script>
+
+
+</html>

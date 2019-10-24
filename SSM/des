@@ -1,0 +1,6 @@
+A cycle was detected in the build path of project 'orz.doublexi.web'.
+ The cycle consists of projects 
+ {orz.doublexi.dao, orz.doublexi.domain, orz.doublexi.service,
+  orz.doublexi.utils, orz.doublexi.web}	
+ orz.doublexi.web		Build path	Build Path Problem
+	

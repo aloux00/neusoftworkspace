@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+body{
+}
+</style>
+</head>
+<body>
+<div id="app">
+//列表遍历
+<ul>
+<li v-for="stu in students">
+name:{{stu.name}},age:{{stu.age}}
+</li>
+</ul>
+属性遍历
+<ul>
+<li v-for="att in teacher">
+{{att}}
+</li>
+</ul>
+//都遍历
+<ul>
+<li v-for="(value,key,num) in teacher">
+{{key}}:{{value}}:{{num}}
+</li>
+</ul>
+
+
+//练习
+<table style="background-color: pink;">
+<tr>
+<td  v-for="pic in pictures">
+<img :src="pic.url"/><br/><p>{{pic.desc}}</p>
+</td>
+</tr>
+</table>
+
+
+</div>
+</body>
+<script type="text/javascript">
+new Vue({
+	el:'#app',
+	data:{
+		students:[
+			{name:'Tom',age:'40'},
+			{name:'Lucy',age:'22'},
+			{name:'James',age:'30'},
+			{name:'Tomy',age:'20'}
+		],
+		teacher:{
+			name:'meng',
+			age:'20',
+			sex:'fmale',
+			city:'qingdao'
+			
+		},
+		pictures:[
+			{url:'2019_10_16[14.26.21].png',desc:'zheshi描述'},
+			{url:'2019_10_16[14.26.30].png',desc:'zheshi描述'},
+			{url:'2019_10_16[14.26.43].png',desc:'zheshi描述'},
+			{url:'2019_10_16[14.26.50].png',desc:'zheshi描述'}
+		]
+	}
+})
+</script>
+</html>

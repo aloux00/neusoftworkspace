@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<style type="text/css">
+[v-clock]{
+display: none;
+}
+</style>
+</head>
+
+<body>
+<div id="vue" v-html="msg">
+{{msg}}
+</div>
+<div id="vue2">
+{{msg}}
+</div>
+</body>
+<script type="text/javascript">
+new Vue({
+	el:'#vue',
+	data:{
+		msg:'<h1>这是一级标题</h1>'
+	}
+})
+new Vue({
+	el:'#vue2',
+	data:{
+		msg:'<h1>这是一级标题22</h1>'
+	}
+})
+</script>
+</html>

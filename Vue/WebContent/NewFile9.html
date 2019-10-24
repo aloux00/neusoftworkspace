@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+p{
+width: 200px;
+height:200px;
+background-color: green;
+}
+.fade-enter-active,.fade-leave-active{
+transition: all 1s;
+}
+.fade-enter,.fade-leave-to{
+opacity: 0;
+width:0px;
+height:0px;
+background-color: red;
+border-radius: 50%;
+}
+.fade-enter-to,.fade-leave{
+position: 1;
+}
+
+</style>
+</head>
+<body>
+<div id="app">
+<button @click="change()">转变</button>
+<transition name="fade">
+<p v-show="flg" style="">这个有文字</p>
+</transition>
+</div>
+</body>
+<script type="text/javascript">
+new Vue({
+	el:'#app',
+	data:{
+
+		flg:"true"
+		
+	},
+	methods:{
+		change(){
+			alert("hehe")
+			this.flg=!this.flg;
+			
+		}
+	}
+	
+});
+</script>
+</html>

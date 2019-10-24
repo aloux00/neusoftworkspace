@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<form action="">
+<fieldset>
+<label>
+包含的字文本框<input/>
+</label>
+<fieldset>
+<label>
+包含的孙子文本框<input/>
+</label>
+</fieldset>
+</fieldset>
+</form>
+<fieldset>
+<label>
+非包含的文本框<input/>
+</label>
+</fieldset>
+<label>这是label标签</label>
+</body>
+
+<script type="text/javascript">
+$("form input").css({"border":"5px solid red","background-color":"blue"});
+</script>
+</html>

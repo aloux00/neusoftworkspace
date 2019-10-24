@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<div id="app">
+<testslot>
+<label slot="myslot2">this is slot's2 content</label>
+<label slot="myslot">this is slot's content</label>
+</testslot>
+</div>
+<template id="mytp">
+<div>
+<h4>this is component</h4>
+<slot name="myslot"></slot>
+<slot name="myslot2"></slot>
+</div>
+</template>
+</body>
+<script type="text/javascript">
+new Vue({
+	el:'#app',
+	data:{
+		
+	},
+	components:{
+		"testslot":{
+			template:"#mytp"
+		}
+		
+		}
+	
+});
+
+</script>
+</html>

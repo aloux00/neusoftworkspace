@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+function openWin(){
+    myWindow=window.open("","","width=200,height=100");
+    myWindow.document.write("<p>这是'我的窗口'</p>");
+}
+function closeWin(){
+    myWindow.close();
+} 
+</script>
+<style type="text/css">
+#aa{
+vertical-align:top;
+
+border-style:outset;
+width: 220px;
+height: 150px;
+}
+#dd>div>div{
+font-weight:900;
+margin: 4px;
+}
+#dd>div>div+div{
+font-weight: normal;
+text-indent: 30px;
+}
+#bb{
+vertical-align:top;
+border-style:outset;
+width: 220px;
+height: 150px;
+
+}
+#dd{
+float:right;
+margin: auto ;
+position: fixed;
+
+}
+
+</style>
+</head>
+<body style="height: 2000px;width:100%;background-color: gray;">
+<div id="dd" >
+<div id="aa">
+<div>黑板报
+</div>
+<div>
+只是黑板报
+</div>
+</div>
+<div id="bb">
+<div>购物指南
+</div>
+<a href="#" onclick="openWin()">ee</a>
+<a href="#" onclick="closeWin()">ee</a>
+<div >
+这是购物指南
+</div>
+</div>
+<div id="cc"><img src="zhinan.jpg"/></div>
+</div>
+
+</body>
+</html>

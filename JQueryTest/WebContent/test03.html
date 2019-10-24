@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script><base>
+<script type="text/javascript">
+$(function(){
+	$("[name='item']").css("visibility","hidden").mouseenter(function() {
+		$(this).css("background-color","green");
+	 }).mouseleave(function() {
+		$(this).css("background-color","white");
+	});
+	$("#show").click(function() {
+		if($("[name='item']").css("visibility")=='hidden'){
+		$("[name='item']").css("visibility","visible");
+		}else{
+		$("[name='item']").css("visibility","hidden");
+			
+		}
+		
+	});
+});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+<tr id="show"><td>展示商品</td></tr>
+<tr name="item"><td>商品01</td></tr>
+<tr name="item"><td>商品02</td></tr>
+<tr name="item"><td>商品03</td></tr>
+<tr name="item"><td>商品04</td></tr>
+</table>
+</body>
+</html>

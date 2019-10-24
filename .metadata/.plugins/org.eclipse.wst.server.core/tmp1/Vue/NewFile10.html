@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div id="app">
+<hello></hello>
+<develop></develop>
+<tem></tem>
+</div>
+<template id="tem"><p>hehehe</p></template>
+</body>
+<script type="text/javascript">
+
+Vue.component("hello",{
+	template:"<h3>hello world</h3>"
+	
+	
+	
+})
+Vue.component("tem",{
+	template:"#tem"
+	
+	
+	
+})
+new Vue({
+	el:'#app',
+	components:{
+		"develop":{
+			template:"<ul><li>heheh</li></ul>"
+		}
+		
+	}
+	
+});
+
+</script>
+</html>

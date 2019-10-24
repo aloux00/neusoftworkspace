@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script><base>
+<script type="text/javascript">
+$(function(){
+	$("#button").click(function(){
+console.log("单ji");		
+	}).dblclick(function() {
+		console.log("shuangxijji");
+	});
+	
+	
+	$("#div01").mouseover(function() {
+		$(this).css("background-color", "red");
+	}).mouseout(function() {
+		$(this).css("background-color", "white");
+	});
+	
+	$("#in").keydown(function(e) {
+		alert(e.keyCode);
+	}).focus;
+});
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<button id="button">按钮</button>
+<div id="div01">
+<p>会变颜色哦</p>
+</div>
+<input id="in"/>
+</body>
+</html>

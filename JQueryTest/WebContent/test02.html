@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	document.write("hehe");
+	document.write("hehe");
+	document.writeln("hehe");
+	document.writeln("hehe");
+	
+});
+</script>
+</head>
+<body>
+<div id="box">
+<h2 class="odds" title="cartoonlist">动画列表</h2>
+<ul>
+<li class="odds" title="kn_jp">名侦探柯南</li>
+<li class="evens" title="hy_jp">火影忍者</li>
+<li class="odds" title="ss_jp">死神</li>
+<li class="enens" title="yj_jp">妖精的尾巴</li>
+<li class="odds" title="yi_jp">银魂</li>
+<li class="evens" title="hm_da">黑猫警长</li>
+<li class="odds" title="xl_ds">仙履奇缘</li>
+</ul>
+</div>
+</body>
+<script type="text/javascript">
+$("h2[title]").css("background-color","red");
+$("[class='odds']").css("background-color","yellow");
+$("[id!='box']").css("background-color","##7DBFA3");
+$("[title^='h']").css("background-color","#98C4E5");
+
+</script>
+</html>

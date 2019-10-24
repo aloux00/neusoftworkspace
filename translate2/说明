@@ -1,0 +1,17 @@
+up是“哑巴”,不想(gan)说话
+
+最终效果：setup.exe文件     双击安装能连带着jre一起解压到安装目录
+
+所需工具：导出能正常运行的jar文件   软件exe4j以及inno setup
+              嫌麻烦可以直接云盘：https://pan.baidu.com/s/18hyOCm94P-luQLHUD7-RyA
+              
+百度关键词：①如何生成可执行jar
+        ②exe4j如何生成exe文件
+        ③inno setup这里网上没有太多关于jar的使用方法，看我视频
+        
+关键点：视频中会强调
+     ①exe4j添加jre的时候确保目录为  ./jre  这种格式
+     ②inno setup添加目录的时候确保添加的是jre目录的父目录
+	 
+	 大功告成！！！
+

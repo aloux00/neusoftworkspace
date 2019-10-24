@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<button id="bt01">按钮</button>
+</body>
+<script type="text/javascript">
+$("#bt01").click(function() {
+	$.ajax(
+			{
+				url:"http://sandboxapi.kdniao.com:8080/kdniaosandbox/gateway/exterfaceInvoke.json",
+				type:"GET",
+				//data:{type:"shentong",postid:"1111"},
+				success:function(data){
+					alert(JSON.stringify(data));
+				},
+				contentType: "application/x-www-form-urlencoded;charset=utf-8",
+				 dataType : "json",
+				 error:function(data){
+					 alert("ERROR")
+				 }
+			}		
+			)
+})
+</script>
+</html>

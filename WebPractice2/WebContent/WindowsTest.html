@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript">
+function haha(){
+	
+	return document.getElementById("tt").children[0].getAttribute("value");
+}
+</script>
+<body>
+<select id="tt">
+<option value="1">11</option>
+<option value="2">22</option>
+<option value="3">33</option>
+</select>
+<button onclick="alert(haha())">haha</button>
+</html>

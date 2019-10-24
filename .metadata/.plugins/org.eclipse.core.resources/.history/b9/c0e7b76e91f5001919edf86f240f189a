@@ -1,0 +1,11 @@
+
+public class test {
+	/**
+	 * 
+	 * @param args
+	 */
+public static void main(String[] args) {
+	System.out.println(PP23.i);
+	int a=PP23.i;
+}
+}

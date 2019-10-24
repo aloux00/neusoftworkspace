@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+<div id="app">
+<button @click="showdiv" type="button">显示</button>
+<button @click="hidediv" type="button">隐藏</button>
+<button @click="togglediv" type="button">切换</button>
+<div v-if="flgshow" id="mydiv" style="background-color: yellow;width: 200px;height: 200px;">
+</div>
+</div>
+
+
+</body>
+<script type="text/javascript">
+new Vue({
+	el:'#app',
+	data:{
+		flgshow:false
+	},
+	methods:{
+		showdiv:function(){
+			this.flgshow=true
+		},
+		hidediv:function(){
+			this.flgshow=false
+		},
+		togglediv:function(){
+			this.flgshow=!this.flgshow
+		}
+	}
+})
+</script>
+</html>

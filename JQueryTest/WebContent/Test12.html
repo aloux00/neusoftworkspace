@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<button  id="bt" type="button">login</button>
+
+</body>
+
+<script type="text/javascript">
+$("#bt").on("click",function(){
+	/* $(this).append("<button   type='button'>login</button>") */
+	$(this).after("<button   type='button'>login</button>")
+})
+
+</script>
+
+
+</html>

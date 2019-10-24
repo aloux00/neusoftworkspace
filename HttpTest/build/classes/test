@@ -1,0 +1,33 @@
+POST /HttpTest/Test01 HTTP/1.1
+Host: localhost
+Content-type: application/x-www-form-urlencoded
+Content-length: 23
+
+PUT /HttpTest/Test01 HTTP/1.1
+Host: localhost
+Content-length: 23
+
+
+GET /index.html HTTP/1.1
+Host: www.baidu.com
+
+
+请求:
+请求行（请求方法 路径 协议）
+头信息（key: value）
+空行
+主体信息
+
+
+响应：
+响应行（协议 状态码 状态文字）
+响应头信息（key: value）
+空行
+主体信息
+
+
+get post head delete put options
+
+
+head和get基本一样，只是不返回内容
+

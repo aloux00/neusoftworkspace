@@ -1,0 +1,15 @@
+import java.io.FileWriter;
+
+public class test {
+	/**
+	 * 
+	 * @param args
+	 */
+	@Deprecated
+public static void main(String[] args) {
+	System.out.println(PP23.i);
+	int a=PP23.i;
+	FileWriter writer=new FileWriter("",false);
+	
+}
+}

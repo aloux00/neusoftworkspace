@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+<div id="app">
+<input v-focus type="text"> 
+<br/>
+{{time}}
+<br/>
+{{time|datefmt('/')}}
+<input type="text"> 
+</div>
+</body>
+<script type="text/javascript">
+/* Vue.directive('focus',function(){
+	
+}) */
+/*   Vue.directive('focus',function(el, bind, vNode){
+	alert(el)
+	el.focus()
+	
+}
+);  */
+   Vue.directive('focus',{
+	inserted(el){
+		el.focus()
+		
+	}
+});  
+Vue.filter("datefmt", function(input,splicchar) {
+	var date=new Date(input)
+	var year=date.getFullYear()
+	var mon=date.getMonth()
+	var day=date.getDate()
+	var fmtstr=year+splicchar+mon+splicchar+day
+	return fmtstr
+})
+new Vue({
+	el:'#app',
+	data:{
+		time: new Date()
+	},
+	//局部过滤器
+	fuilters:{
+		
+	}
+	
+});
+</script>
+</html>

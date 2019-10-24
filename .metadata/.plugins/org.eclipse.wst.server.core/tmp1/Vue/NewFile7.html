@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<div id="app">
+<textarea id="text" rows="4" cols="10" v-model="temp"></textarea>
+<button @click="commit">提交</button>
+<ul>
+<li v-for="str in comments">
+{{str}}
+</li>
+</ul>
+
+</div>
+<div id="app2">
+<textarea id="text" rows="4" cols="10" v-model="temp"></textarea>
+<button @click="commit">提交</button>
+<ul>
+<li v-for="(v,i) in comments">
+<p>{{v}}<span @click="del(i)">X</span></p>
+</li>
+</ul>
+
+</div>
+</body>
+<script type="text/javascript">
+new Vue({
+	el:'#app',
+	data:{
+		comments:[],
+		temp:''
+		
+	},
+	methods:{
+		commit:function(){
+			this.comments.unshift(this.temp)
+			this.temp=""
+		}
+	}
+})
+new Vue({
+	el:'#app2',
+	data:{
+		comments:["1111","2222"],
+		temp:""
+	},
+	methods:{
+		commit:function(){
+			this.comments.unshift(this.temp)
+			temp=""
+		},
+		del:function(i){
+			this.comments.splice(i,1)
+		}
+		
+	}
+})
+</script>
+</html>

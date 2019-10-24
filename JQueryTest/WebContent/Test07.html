@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+
+</style>
+</head>
+<body>
+<img id="img" alt="图片" src="icon.jpg">
+<button id="in">淡入</button>
+<button id="out">淡出</button>
+<button id="down">下</button>
+<button id="up">上</button>
+
+</body>
+
+<script type="text/javascript">
+$("#in").click(function(){
+	$("#img").fadeIn(300);
+})
+$("#out").click(function(){
+	$("#img").fadeOut(300);
+	
+})
+$("#down").click(function(){
+	$("#img").slideDown(300);
+	
+})
+$("#up").click(function(){
+	$("#img").slideUp(300);
+	
+})
+
+
+
+
+</script>
+
+
+</html>

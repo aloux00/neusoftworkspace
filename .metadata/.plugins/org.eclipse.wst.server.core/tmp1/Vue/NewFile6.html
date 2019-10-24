@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+</style>
+</head>
+<body>
+<div id="app">
+<input type="text" v-model="msg" placeholder="please enter the text" />
+<p>what you enter is {{msg}}</p>
+<input id="a" type="checkbox" value="a" v-model="hobbies"><label for="a">复选框</label>
+<input id="b" type="checkbox" value="b" v-model="hobbies"><label for="b">复选框</label>
+<input id="c" type="checkbox" value="c" v-model="hobbies"><label for="c">复选框</label>
+<input id="d" type="checkbox" value="d" v-model="hobbies"><label for="d">复选框</label>
+<p >{{hobbies}}</p>
+</div>
+</body>
+<script type="text/javascript">
+new Vue({
+	el:'#app',
+	data:{
+		msg:'doublexi',
+		hobbies:[]
+		
+		
+	}
+})
+</script>
+</html>

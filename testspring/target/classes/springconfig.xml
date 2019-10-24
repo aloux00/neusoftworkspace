@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd ">
+
+<bean name="test" class="orz.doublexi.First">
+<property name="print" ref="p" ></property>
+</bean>
+<bean name="p" class="orz.doublexi.MyPrint"></bean>
+<bean id="adv" class="orz.doublexi.Advice"></bean>
+<aop:config>
+<aop:pointcut expression="execution(* orz.doublexi.First.*(..))" id="pointcut"/>
+<aop:aspect ref="adv">
+<aop:before method="pre" pointcut-ref="pointcut"/>
+</aop:aspect>
+</aop:config>
+
+
+<aop:config>
+        <!-- 配置切入点 expression表示表达式 -->
+        <aop:pointcut expression="execution(* orz.doublexi.First.haha(..))" id="pointcut1"/>
+
+        <!-- 配置切面  
+            ref指向用来增强的类的id
+        -->
+        <aop:aspect ref="adv">
+            <!--前置增强  method表示增强类里的哪个方法  pointcut-ref表示切入点-->
+            <aop:before method="pre" pointcut-ref="pointcut1"/>
+
+            <!-- 后置增强 -->
+            <aop:after method="after" pointcut-ref="pointcut1"/>
+
+            <!-- 环绕增强 -->
+        </aop:aspect>
+    </aop:config>
+
+</beans>

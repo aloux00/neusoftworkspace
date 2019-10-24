@@ -1,0 +1,6 @@
+
+public interface PP23 {
+static int i=2;
+int a=2;
+
+}

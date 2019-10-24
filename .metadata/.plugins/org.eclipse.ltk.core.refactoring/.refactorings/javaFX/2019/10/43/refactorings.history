@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;orz.doublexi.clazz34&apos; to &apos;javaFX/src/orz.doublexi.clazz34&apos;&#x0D;&#x0A;- Original project: &apos;javaFX&apos;&#x0D;&#x0A;- Destination element: &apos;javaFX/src/orz.doublexi.clazz34&apos;&#x0D;&#x0A;- Original element: &apos;javaFX/src/orz.doublexi.clazz34&apos;" description="Copy package" destination="/src&lt;orz.doublexi.clazz34" element1="/src&lt;orz.doublexi.clazz34" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1571574043111" version="1.0"/>
+</session>

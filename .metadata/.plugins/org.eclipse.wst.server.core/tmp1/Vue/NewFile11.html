@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="js/vue.js"></script>
+<script src="js/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body>
+
+<div id="app">
+<component v-bind:is="msg"></component>
+<componenv-bindt :is="msg"></component>
+<button @click="login()">login</button>
+<button @click="regist()">regist</button>
+
+</div>
+<template id="logintmp">
+<div class="componentdiv">
+<table>姓名</table><input type="text"/><br/>
+<table>密码</table><input type="text"/><br/>
+</div>
+</template>
+<template id="regtmp">
+<div class="componentdiv">
+<table>姓名</table><input ><br/>
+<table>身份证</table><input ><br/>
+</div>
+</template>
+</body>
+<script type="text/javascript">
+new Vue({
+	el:'#app',
+	data:{
+		msg:'logincom'
+	},
+	components:{
+		'logincom':{
+			template:'#logintmp'
+		},
+		'registcom':{
+			template:'#regtmp'
+		}
+		}
+	}
+	
+);
+
+</script>
+</html>

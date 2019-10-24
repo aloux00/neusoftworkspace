@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" >
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+<div class="show modal">
+<div class="modal-dialog ">
+<div class="modal-content">
+<div class="modal-header">I'm head<button class="close" data-dismiss="modal">x</button></div>
+<div class="modal-body">I'm body</div>
+<div class="modal-footer">I'm foot</div>
+</div>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+$(".close").on("click",function(){
+	$(".modal").removeClass("show");
+})
+</script>
+</html>
